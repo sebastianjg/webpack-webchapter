@@ -1,9 +1,12 @@
 // webpack.config.js
 const webpack = require('webpack')
+const ExtractTextPlugin = require('extract-text-webpack-plugin')
+const extractCSS = new ExtractTextPlugin('[name].bundle.css')
 
 const config = {
   entry: './src/index.js',
   output: {
+    path: './dist/',
     filename: './dist/bundle.js'
   },
   module: {
@@ -12,11 +15,7 @@ const config = {
         test: /\.(js|jsx)$/, use: 'babel-loader'},
       {
         test: /\.scss$/,
-        use: [
-        'style-loader',
-        'css-loader',
-        'sass-loader',
-        ],
+        loader: extractCSS.extract(['css-loader','sass-loader'])
       },
       {
         test: /\.(png|jpg)$/,
@@ -26,7 +25,10 @@ const config = {
         }]
       },
     ],
-  }
+  },
+  plugins: [
+    extractCSS,
+  ]
 }
 
 module.exports = config
