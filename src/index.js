@@ -1,3 +1,8 @@
-// index.js
-const root = document.querySelector('#root');
-root.innerHTML = '<h1>Hello Webpack!</h1>';
+// src/app.js
+import { groupBy } from 'lodash/collection'
+import people from './people'
+
+const managerGroups = groupBy(people, 'manager')
+
+const root = document.querySelector('#root')
+root.innerHTML = `<pre>${JSON.stringify(managerGroups, null, 2)}</pre>`

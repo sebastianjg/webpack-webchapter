@@ -5,6 +5,11 @@ const config = {
   entry: './src/index.js',
   output: {
     filename: './dist/bundle.js'
+  },
+  module: {
+    rules: [
+      {test: /\.(js|jsx)$/, use: 'babel-loader'}
+    ]
   }
 }
 
