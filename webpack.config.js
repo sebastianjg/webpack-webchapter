@@ -8,8 +8,17 @@ const config = {
   },
   module: {
     rules: [
-      {test: /\.(js|jsx)$/, use: 'babel-loader'}
-    ]
+      {
+        test: /\.(js|jsx)$/, use: 'babel-loader'},
+      {
+        test: /\.scss$/,
+        use: [
+        'style-loader',
+        'css-loader',
+        'sass-loader',
+        ],
+      },
+    ],
   }
 }
 
