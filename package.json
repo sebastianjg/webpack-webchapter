@@ -1,0 +1,14 @@
+{
+  "name": "webpack-webchapter",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Sebastian Jara <sebastian.jara@knowit.no>",
+  "license": "MIT",
+  "scripts": {
+    "start": "webpack --watch",
+    "build": "webpack -p"
+  },
+  "devDependencies": {
+    "webpack": "^2.2.1"
+  }
+}
