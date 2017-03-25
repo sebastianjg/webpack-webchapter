@@ -7,7 +7,7 @@ const config = {
   entry: './src/index.js',
   output: {
     path: './dist/',
-    filename: './dist/bundle.js'
+    filename: 'bundle.js'
   },
   module: {
     rules: [
