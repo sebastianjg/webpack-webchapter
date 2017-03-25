@@ -6,6 +6,7 @@ There are 4 branches covering the different elements in the talk:
 - **master** (minimal Webpack setup)
 - **adding-babel**
 - **adding-css**
+- **adding-images**
 - **adding-plugin**
 
 Source: [https://www.sitepoint.com/beginners-guide-to-webpack-2-and-module-bundling](https://www.sitepoint.com/beginners-guide-to-webpack-2-and-module-bundling/)
